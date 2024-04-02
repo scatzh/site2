@@ -227,10 +227,9 @@ body {
   text-decoration: none;
   transition: all 0.3s ease;
 }
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
   .menu-list li a {
     color: white;
-    font-size: 10px;
     font-weight: 300;
     margin-left: 25px;
   }
@@ -310,6 +309,7 @@ body {
   cursor: pointer;
   display: none;
 }
+
 .menu-list .cancel-btn {
   position: absolute;
   right: 30px;
@@ -338,7 +338,7 @@ body {
   }
   .navbar .menu-list {
     position: fixed;
-    height: 100vh;
+    height: 200vh;
     width: 100%;
     max-width: 400px;
     left: -100%;
@@ -438,7 +438,28 @@ body {
   position: relative;
   display: inline-block;
 }
-
+@media (max-width: 800px) {
+  .dropdown-content {
+    height: 200px;
+    overflow-y: scroll;
+    max-width: 320px;
+    margin-left: -30%;
+  }
+  .dropdown-content1 {
+    height: 600px;
+    overflow-y: scroll;
+    max-width: 320px;
+    margin-left: 10%;
+  }
+}
+.dropdown-content1 {
+  display: none;
+  position: absolute;
+  background-color: #414141;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
 /* Dropdown Content (Hidden by Default) */
 .dropdown-content {
   display: none;
@@ -456,12 +477,23 @@ body {
   text-decoration: none;
   display: block;
 }
-
+.dropdown-content1 a {
+  color: gray;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
+.dropdown:hover .dropdown-content1 {
+  display: block;
+}
 .dropdown-content a:hover {
+  background-color: #39424b;
+}
+.dropdown-content1 a:hover {
   background-color: #39424b;
 }
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");

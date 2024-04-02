@@ -5,6 +5,7 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
 
     <title>ItcSlider - Example 05</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"
@@ -54,9 +55,7 @@
     <nav class="navbar">
       <div class="content">
          
-        <div class="logo">
-          <a href="#"><img src="logo.png" alt="Кнопка" /></a>
-        </div>
+       <div class="logo" id="logos"><a href="#"><img src="logo.png" alt="Кнопка" /></a></div>
         <ul class="menu-list">
           <div class="icon cancel-btn">
             <i class="fas fa-times"></i>
@@ -64,9 +63,9 @@
           <div class="dropdown">
             <li>
               <a href="#" class="dropbtn"
-                >Сведения об образовательной организации</a
-              >
-              <div class="dropdown-content">
+                >Сведения об образовательной организации</a>
+              <div class="dropdown-content1" >
+                
                 <a href="#">Основные сведения</a>
                 <a href="#"
                   >Структура и органы управления образовательной организацией</a
@@ -88,6 +87,7 @@
                 >
                 <a href="#">Доступная среда</a
                 ><a href="#">Международное сотрудничество</a>
+               
               </div>
             </li>
           </div>
@@ -114,16 +114,19 @@
               </div>
             </li>
           </div>
-          <div class="dropdown">
-            <li>
+
+                 <div class="dropdown">  
+              <li>
+                  
               <a href="#" class="dropbtn">Пресс-служба</a>
               <div class="dropdown-content">
                 <a href="#">Контакты</a>
                 <a href="#">Форма обращения</a>
                 <a href="#">Вопросы и ответы</a>
-              </div>
-            </li>
-          </div>
+                </div>
+                  </li>
+                </div>
+
           
         </ul>
        <button id='next' class="themes" >Смена темы       </button>   
@@ -368,6 +371,7 @@
       };
       window.onscroll = () => {
         this.scrollY > 20
+
           ? navbar.classList.add("sticky")
           : navbar.classList.remove("sticky");
       };
@@ -377,9 +381,31 @@
         interval: 3000,
         cycle: true,
       });
+    
     </script>
-   
  
+       <script>
+jQuery(document).ready(function($){
+$('#logos').fadeOut(); //скрываем кнопку
+$(window).scroll(function () {
+if ($(this).scrollTop() > 50) { // при прокрутке страницы на 200 пикселей вниз
+$('#logos').fadeIn();   // отображаем кнопку
+} else {
+$('#logos').fadeOut(); // в противном случае скрываем
+}
+});
+});
+jQuery(document).ready(function($){
+$('#next').fadeOut(); //скрываем кнопку
+$(window).scroll(function () {
+if ($(this).scrollTop() > 50) { // при прокрутке страницы на 200 пикселей вниз
+$('#next').fadeIn();   // отображаем кнопку
+} else {
+$('#next').fadeOut(); // в противном случае скрываем
+}
+});
+});
+</script>
 
    <figure class="half">
     
