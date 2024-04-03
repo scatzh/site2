@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <title>ItcSlider - Example 05</title>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="itc-slider.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/8abed6b128.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="gpbu.css" />
+    <link
+      href="/examples/libs/ui-components/itc-slider/itc-slider.css"
+      rel="stylesheet"
+    />
+    <script
+      src="/examples/libs/ui-components/itc-slider/itc-slider.js"
+      defer
+    ></script>
+    <script defer src="itc-slider.js"></script>
+
+    <script defer src="theme.js"></script>
+  </head>
+
+  <body>
+    <svg style="display: none" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="eye" viewBox="0 0 16 16">
+        <path
+          d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+        />
+        <path
+          d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+        />
+      </symbol>
+    </svg>
+
+    <nav class="navbar">
+      <div class="content">
+        <div class="logo" id="logos">
+          <a href="#"><img src="logo.png" alt="Кнопка" /></a>
+        </div>
+        <ul class="menu-list">
+          <div class="icon cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+          <div class="dropdown">
+            <li>
+              <a href="#" class="dropbtn"
+                >Сведения об образовательной организации</a
+              >
+              <div class="dropdown-content1">
+                <a href="#">Основные сведения</a>
+                <a href="#"
+                  >Структура и органы управления образовательной организацией</a
+                >
+                <a href="#">Документы</a> <a href="#">Образование</a>
+                <a href="#">Образовательные стандарты и требования</a>
+                <a href="#"
+                  >Руководство. Педагогический (научно-пегагогический) состав</a
+                >
+                <a href="#"
+                  >Материально-техническое обеспечение и оснащенность
+                  образовательного процесса</a
+                >
+                <a href="#">Стипендии и меры поддержки обучающихся</a>
+                <a href="#">Платные образовательные услуги</a>
+                <a href="#">Финансово - хозяйственная деятельность</a>
+                <a href="#"
+                  >Вакантные места для приема (перевода) обучающихся</a
+                >
+                <a href="#">Доступная среда</a
+                ><a href="#">Международное сотрудничество</a>
+              </div>
+            </li>
+          </div>
+
+          <div class="dropdown">
+            <li>
+              <a href="#" class="dropbtn"> Поступающим</a>
+              <div class="dropdown-content">
+                <a href="#">Перечень программ</a>
+                <a href="#">Перечень программ ФП "Профессионалитет"</a>
+                <a href="#">Приемная комиссия НАМТ</a>
+              </div>
+            </li>
+          </div>
+          <li><a href="studentam.html">Студентам и педагогам</a></li>
+          <div class="dropdown">
+            <li>
+              <a href="#" class="dropbtn">Мероприятия</a>
+              <div class="dropdown-content">
+                <a href="#">Воспитательная работа</a>
+                <a href="#">Дополнительное образование</a>
+                <a href="#">Студенческий спортивный клуб</a>
+                <a href="#">Конкурсы профессионального мастерства</a>
+              </div>
+            </li>
+          </div>
+
+          <div class="dropdown">
+            <li>
+              <a href="#" class="dropbtn">Пресс-служба</a>
+              <div class="dropdown-content">
+                <a href="#">Контакты</a>
+                <a href="#">Форма обращения</a>
+                <a href="#">Вопросы и ответы</a>
+              </div>
+            </li>
+          </div>
+        </ul>
+        <button id="next" class="themes">
+          <img class="img4" src="" alt="" />
+        </button>
+
+        <div class="icon menu-btn">
+          <i class="fas fa-bars" style="color: #282828"></i>
+        </div>
+      </div>
+    </nav>
+
+    <div class="about"></div>
+    <div class="img-namt"></div>
+
+    <script>
+      const body = document.querySelector("body");
+      const navbar = document.querySelector(".navbar");
+      const menuBtn = document.querySelector(".menu-btn");
+      const cancelBtn = document.querySelector(".cancel-btn");
+      menuBtn.onclick = () => {
+        navbar.classList.add("show");
+        menuBtn.classList.add("hide");
+        body.classList.add("disabled");
+      };
+      cancelBtn.onclick = () => {
+        body.classList.remove("disabled");
+        navbar.classList.remove("show");
+        menuBtn.classList.remove("hide");
+      };
+      window.onscroll = () => {
+        this.scrollY > 20
+          ? navbar.classList.add("sticky")
+          : navbar.classList.remove("sticky");
+      };
+    </script>
+
+    <script>
+      jQuery(document).ready(function ($) {
+        $("#logos").fadeOut(); //скрываем кнопку
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 50) {
+            // при прокрутке страницы на 200 пикселей вниз
+            $("#logos").fadeIn(); // отображаем кнопку
+          } else {
+            $("#logos").fadeOut(); // в противном случае скрываем
+          }
+        });
+      });
+      jQuery(document).ready(function ($) {
+        $("#next").fadeOut(); //скрываем кнопку
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 50) {
+            // при прокрутке страницы на 200 пикселей вниз
+            $("#next").fadeIn(); // отображаем кнопку
+          } else {
+            $("#next").fadeOut(); // в противном случае скрываем
+          }
+        });
+      });
+    </script>
+  <h1 style="text-align: left; padding-top: 100px; padding-left: 5%">
+      Взаимодействие ГБПОУ "НАМТ" с работодателями
+    </h1>
+    <div class="tex">
+    <p style="margin-left: 2%;">
+      Основным работодателем и социальным партнером ГБПОУ «Нижегородский
+      автомеханический техникум» является Группа ГАЗ.
+    </p>
+    <p style="margin-left: 2%;">
+      Группа ГАЗ - крупнейший производитель легких коммерческих автомобилей в
+      России, лидер модернизации автомобилестроительной отрасли страны. Компания
+      объединяет 13 предприятий в восьми регионах России. Является лидером рынка
+      транспорта России, занимая 55% сегмена легких коммерческих автомобилей и
+      около 65% сегмента автобусов. Группа ГАЗ лидер среди российских
+      автопроизводителей по созданию экологичных видов транспорта, включая
+      разработки техники на альтернативных видах топлива.
+    </p>
+    <p style="margin-left: 2%;">
+      Компания выпускает легкие коммерческие автомобили ГАЗель NEXT, Соболь,
+      среднетоннажные грузовики Валдай и ГАЗ, машины повышенной проходимости
+      Садко и Вепрь. Модельный ряд включает более 300 модификаций автомобилей:
+      скорой медицинской помощи, школьные автобусы, автоцистерны, самосвалы,
+      автоэвакуаторы, автолавки, лаборатории, инкассаторские автомобили,
+      спецтранспорт для силовых структур и др.
+    </p >
+    <p style="margin-left: 2%;"> 
+      Группа ГАЗ - высокотехнологичная компания с высоким уровнем автоматизации,
+      производственные мощности которой постоянно модернизируются. За последние
+      5 лет, в рамках запуска в производство легких коммерческих автомобилей
+      поколения NEXT, на предприятии были созданы линия по производству
+      независимой передней подвески для лёгких коммерческих автомобилей, самый
+      высокотехнологичный в России окрасочный комплекс, новые линии сварки кабин
+      и кузовов с уровнем автоматизации 85%.
+    </p>
+    <p style="margin-left: 2%;">
+      Техникум готовит для нижегородских предприятий Группы ГАЗ специалистов по
+      специальностям: 02.02 Автомобиле- и тракторостроение 02.08 Технология
+      машиностроения 02.11 Техническая эксплуатация и обслуживание
+      электрического и электромеханического оборудования (по отраслям) 02.12
+      Монтаж, техническое обслуживание и ремонт промышленного оборудования 02.14
+      Оснащение средствами автоматизации технологических процессов и производств
+      (по отраслям) 02.10 Мехатроника и мобильная робототехник (по отраслям)
+      02.05 Эксплуатация транспортного электрооборудования и автоматики (по
+      видам транспорта, за исключением водного) 02.07 Информационные системы и
+      программирование
+    </p>
+    <p style="margin-left: 2%;">
+      Все специальности техникума востребованы на предприятиях Группы ГАЗ. С
+      двумя предприятиями, ООО «Сервисный центр», ПАО «ГАЗ», техникум реализует
+      проект дуального образования, направленный на обеспечение предприятий
+      ремонтным и электротехническим персоналом.
+    </p>
+    <p style="margin-left: 2%;">
+      С 2022 года ГБПОУ «НАМТ» совместно с Группой ГАЗ реализует Федеральный
+      проект «Профессионалитет». На базе техникума создан
+      образовательно-производственный кластер, в состав которого вошли 5
+      профессиональных образовательных организаций Нижегородской области. В
+      рамках проекта созданы инновационных мастерские, внедрены новые
+      образовательные программы, ориентированные на потребности базового
+      предприятия. Все педагогические работники, мастера производственного
+      обучения, работники, ответственные за воспитание прошли обучение и
+      стажировки на производстве по компетенциям, необходимым для эффективной
+      реализации проекта. Они получили педагогические, производственные,
+      управленческие навыки, навыки конструирования образовательных программ под
+      запросы работодателя.
+    </p>
+    <p style="margin-left: 2%;">
+      Со студентами, участниками проекта, Группа ГАЗ заключает целевые договоры
+      на трудоустройство выпускников.
+    </p>
+    <p style="margin-left: 2%;">
+      По специальностям 23.02.03 Техническое обслуживание и ремонт
+      автомобильного транспорта, 23.02.05 Эксплуатация транспортного
+      электрооборудования и автоматики (по видам транспорта, за исключением
+      водного) техникум сотрудничает с Группами компаний «Луидор». «Агат».
+      Студенты специальности 38.02.01 Экономика и бухгалтерский учёт (по
+      отраслям) проходят практическую подготовку и трудоустраиваются в АО
+      «Гринатом».
+    </p>
+    </div>
+   </div>
+    <button class="accordionbut">  <a href="https://намт.рф/images/План.pdf">План взаимодействия ГБПОУ "НАМТ" с работодателями</a></button><br><br>
+    
+  <script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+    <script
+      src="https://code.jquery.com/jquery-2.2.0.min.js"
+      type="text/javascript"
+    ></script>
+
+    <footer>
+      <div class="footer">
+        <div class="row">
+          <a href="#"><i class="fa fa-youtube"></i></a>
+          <a href="#"><i class="fa fa-vk"></i></a>
+        </div>
+
+        <div class="row">
+          <ul>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Приемная комиссия</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+            <li><a href="#">Как добраться</a></li>
+            <li><a href="#">Создатели </a></li>
+          </ul>
+        </div>
+
+        <div class="row">© 2024 НАМТ</div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -26,7 +26,7 @@
       src="https://kit.fontawesome.com/8abed6b128.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="05.css" />
+    <link rel="stylesheet" href="exscurse.css" />
     <link
       href="/examples/libs/ui-components/itc-slider/itc-slider.css"
       rel="stylesheet"
@@ -185,7 +185,71 @@
         });
       });
     </script>
+    <h1 style="text-align: left; padding-top: 100px; padding-left: 5%">
+      Экскурсии на предприятие
+    </h1>
+    <br />
+    <div class="inagi">
+      <img src="ex1.jpg" />
+    </div>
+    <div class="tex">
+      <p style="text-align: center; margin-left: 2%">
+        Группа 22-9 МР посетила с экскурсией Завод мостов и агрегатов Группы
+        ГАЗ.
+      </p>
+      <div class="inagi"><img src="exc2.png" /></div>
+      <p style="text-align: center; margin-left: 2%">
+        14 апреля 2023 г. в г. Нижний Новгород прошел региональный этап
+        Всероссийской ярмарки вакансий.
+      </p>
+      <div class="inagi">
+        <img src="exc3.png" />
+      </div>
+      <p style="text-align: center; margin-left: 2%">
+        Экскурсия студентов 2 курса на сборочный конвейер ООО "Автозавод "ГАЗ"
+      </p>
+      <div class="inagi">
+        <img src="exc4.png" />
+      </div>
+      <p style="text-align: center; margin-left: 2%">
+        Знакомство с действующим производством
+      </p>
+      <div class="inagi">
+        <img src="exc5.png" />
+      </div>
+      <p style="text-align: center; margin-left: 2%">
+        Осмотр моделей легких коммерческих автомобилей
+      </p>
+      <div class="inagi">
+        <img src="exc6.png" />
+      </div>
+      <p style="text-align: center; margin-left: 2%">
+        Знакомство с операциями по сборке рамы автомобиля ГАЗель
+      </p>
+      <div class="inagi">
+        <img src="exc7.png" />
+      </div>
+      <p style="text-align: center; margin-left: 2%">
+        Экскурсия на Завод по производству автомобилей VW/Skoda
+      </p>
+    </div>
 
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    </script>
     <script
       src="https://code.jquery.com/jquery-2.2.0.min.js"
       type="text/javascript"
