@@ -31,29 +31,6 @@ body {
   color: var(--color-text);
 }
 
-.container {
-  max-width: 350px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 710px;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1050px;
-    margin: 0 auto;
-  }
-}
-
-::selection {
-  background: rgb(0, 123, 255, 0.3);
-}
 .content {
   max-width: 1650px;
   margin: auto;
@@ -339,10 +316,14 @@ h2 {
 .slick-slide img {
   width: 100%;
 }
-.tex {
-  margin-left: 3%;
-  font-size: large;
+
+h2 {
+  text-align: center;
+  padding: 3rem;
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
 }
+/* Slider */
 .slick-slide {
   margin: 0px 10px;
 }
@@ -399,4 +380,76 @@ h2 {
 .accordionbut:hover {
   background-color: gray;
   border: 3px var(--color-text);
+}
+.accordionspis {
+  border: 3px var(--color-text);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 18px;
+  width: 80%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.active,
+.accordionspis:hover {
+  background-color: gray;
+  border: 3px var(--color-text);
+}
+a:link {
+  color: var(--color-text);
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+  color: var(--color-text);
+}
+a:hover {
+  text-decoration: underline;
+  color: #0094de;
+}
+table {
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+  border-top: 7px;
+  border-collapse: collapse;
+  text-align: center;
+  margin-bottom: 20px;
+  border: 1px solid #dddddd;
+}
+
+td {
+  text-align: left;
+  padding: 10px;
+  border: 3px solid var(--color-text);
+}
+th {
+  text-align: center;
+  padding: 10px;
+  border: 3px solid var(--color-text);
+}
+@media screen and (max-width: 800px) {
+  table thead {
+    display: none;
+  }
+  table tr {
+    display: block;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e8e9eb;
+  }
+  table td {
+    display: block;
+    text-align: right;
+  }
+  table td:before {
+    content: attr(aria-label);
+    float: left;
+    font-weight: bold;
+  }
 }

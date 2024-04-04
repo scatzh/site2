@@ -102,7 +102,7 @@ body {
 }
 
 .menu-list li a {
-  color: transparent;
+  color: var(--color-text);
   font-size: 16px;
   font-weight: 500;
   margin-left: 25px;
@@ -343,8 +343,14 @@ h2 {
   margin-left: 3%;
   font-size: large;
 }
-.inagi img {
+.inage img {
   margin-left: 5%;
+  max-width: 800px;
+}
+@media (max-width: 800px) {
+  .inage img {
+    max-width: 320px;
+  }
 }
 .slick-slide {
   margin: 0px 10px;

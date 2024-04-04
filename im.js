@@ -1,7 +1,7 @@
-const imageList = ["banner3.png", "banner5.png"];
-const imageList1 = ["smallbann.png", "blacksmallbann.png"];
-const imageList2 = ["plansh.png", "planshblack.png"];
-const imageList3 = ["sun.png", "night.webp"];
+const imageList = ["img//banner3.png", "img//banner5.png"];
+const imageList1 = ["img//smallbann.png", "img//blacksmallbann.png"];
+const imageList2 = ["img//plansh.png", "img//planshblack.png"];
+const imageList3 = ["img//sun.png", "img//night.webp"];
 const img = document.querySelector(".img");
 const img2 = document.querySelector(".img2");
 const img3 = document.querySelector(".img3");

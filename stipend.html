@@ -5,6 +5,10 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
 
     <title>ItcSlider - Example 05</title>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+    ></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"
@@ -22,7 +26,7 @@
       src="https://kit.fontawesome.com/8abed6b128.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="studentam.css" />
+    <link rel="stylesheet" href="finhos.css" />
     <link
       href="/examples/libs/ui-components/itc-slider/itc-slider.css"
       rel="stylesheet"
@@ -32,8 +36,8 @@
       defer
     ></script>
     <script defer src="itc-slider.js"></script>
+
     <script defer src="theme.js"></script>
-    <script defer src="im.js"></script>
   </head>
 
   <body>
@@ -50,9 +54,8 @@
 
     <nav class="navbar">
       <div class="content">
-         
-        <div class="logo">
-          <a href="#"><img src="logo.png" alt="Кнопка" /></a>
+        <div class="logo" id="logos">
+          <a href="index.html"><img src="img//logo.png" alt="Кнопка" /></a>
         </div>
         <ul class="menu-list">
           <div class="icon cancel-btn">
@@ -63,27 +66,33 @@
               <a href="#" class="dropbtn"
                 >Сведения об образовательной организации</a
               >
-              <div class="dropdown-content">
-                <a href="#">Основные сведения</a>
-                <a href="#"
+              <div class="dropdown-content1">
+                <a href="inform.html">Основные сведения</a>
+                <a href="struktur.html"
                   >Структура и органы управления образовательной организацией</a
                 >
-                <a href="#">Документы</a> <a href="#">Образование</a>
-                <a href="#">Образовательные стандарты и требования</a>
-                <a href="#"
+                <a href="dokument.html">Документы</a>
+                <a href="obroz.html">Образование</a>
+
+                <a href="obrozst.html"
+                  >Образовательные стандарты и требования</a
+                >
+                <a href="rukovodstv.html"
                   >Руководство. Педагогический (научно-пегагогический) состав</a
                 >
-                <a href="#"
+                <a href="mat-tex.html"
                   >Материально-техническое обеспечение и оснащенность
                   образовательного процесса</a
                 >
-                <a href="#">Стипендии и меры поддержки обучающихся</a>
-                <a href="#">Платные образовательные услуги</a>
-                <a href="#">Финансово - хозяйственная деятельность</a>
-                <a href="#"
+                <a href="stipend.html"
+                  >Стипендии и меры поддержки обучающихся</a
+                >
+                <a href="platnuslug.html">Платные образовательные услуги</a>
+                <a href="finxos.html">Финансово - хозяйственная деятельность</a>
+                <a href="vakant.html"
                   >Вакантные места для приема (перевода) обучающихся</a
                 >
-                <a href="#">Доступная среда</a
+                <a href="sreda.html">Доступная среда</a
                 ><a href="#">Международное сотрудничество</a>
               </div>
             </li>
@@ -99,7 +108,7 @@
               </div>
             </li>
           </div>
-          <li><a href="#">Студентам и педагогам</a></li>
+          <li><a href="studentam.html">Студентам и педагогам</a></li>
           <div class="dropdown">
             <li>
               <a href="#" class="dropbtn">Мероприятия</a>
@@ -111,6 +120,7 @@
               </div>
             </li>
           </div>
+
           <div class="dropdown">
             <li>
               <a href="#" class="dropbtn">Пресс-служба</a>
@@ -121,23 +131,20 @@
               </div>
             </li>
           </div>
-          
         </ul>
-       <button id='next' class="themes" >Смена темы       </button>   
-    
+        <button id="next" class="themes">
+          <img class="img4" src="" alt="" />
+        </button>
 
         <div class="icon menu-btn">
-          <i class="fas fa-bars"></i>
+          <i class="fas fa-bars" style="color: #282828"></i>
         </div>
-       
       </div>
-         
     </nav>
-    
-  
-  
-   
-   
+
+    <div class="about"></div>
+    <div class="img-namt"></div>
+
     <script>
       const body = document.querySelector("body");
       const navbar = document.querySelector(".navbar");
@@ -154,95 +161,79 @@
         menuBtn.classList.remove("hide");
       };
       window.onscroll = () => {
-        this.scrollY > 0
+        this.scrollY > 20
           ? navbar.classList.add("sticky")
           : navbar.classList.remove("sticky");
       };
     </script>
+
     <script>
-      $("#sponsor-carousel").carousel({
-        interval: 3000,
-        cycle: true,
+      jQuery(document).ready(function ($) {
+        $("#logos").fadeOut(); //скрываем кнопку
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 50) {
+            // при прокрутке страницы на 200 пикселей вниз
+            $("#logos").fadeIn(); // отображаем кнопку
+          } else {
+            $("#logos").fadeOut(); // в противном случае скрываем
+          }
+        });
+      });
+      jQuery(document).ready(function ($) {
+        $("#next").fadeOut(); //скрываем кнопку
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 50) {
+            // при прокрутке страницы на 200 пикселей вниз
+            $("#next").fadeIn(); // отображаем кнопку
+          } else {
+            $("#next").fadeOut(); // в противном случае скрываем
+          }
+        });
       });
     </script>
-   
-   <h1 style="text-align: left; padding-top: 200px; padding-left: 5% ;">Студентам и педагогам</h1>
+    <h1 style="text-align: left; padding-top: 100px; padding-left: 5%">
+      Стипендии и меры поддержки обучающихся
+    </h1>
 
-   <button class="accordion">Дистанционное обучение</button>
-<div class="panel">
-  <p><b>Реализация ОПОП СПО с применением ЭО и ДОТ осуществляется на информационно-коммуникационной платформе «Сферум»</b></p><br>
-  <a href="#">Рекомендации Минпросвещения России по организации обучения на дому с использованием дистанционных технологий</a><br><br>
-  <a href="#">Электронные образовательные ресурсы</a><br><br>
-  <a href="#">Методические материалы</a>
-</div>
+    <button class="accordionbut">
+      <a
+        href="https://намт.рф/images/documenty/Образование/Очное/09.02.07_Информационные_системы_и_программирование/Положение_о_стипендиальном_обеспечении.pdf"
+        >Положение о стипендиальном обеспечении</a
+      >
+    </button>
+    <button class="accordionbut">
+      <a
+        href=" https://намт.рф/images/documenty/position_about_scholarships_gas.pdf"
+        >Положение о стипендии ГАЗ</a
+      >
+    </button>
+    <button class="accordionbut">
+      <a href="#">Центр содействия трудоустройству</a>
+    </button>
 
-<button class="accordion">Расписание</button>
-<div class="panel">
-   <br><br><a href="#">Замена расписания</a><br><br>
-   <p><h4><b>Очное отделение</b></h4></p>
-   <a href="#">1 курс</a><br><br>
-   <a href="#">2 курс</a><br><br>
-   <a href="#">3 курс</a><br><br>
-   <a href="#">4 курс</a><br><br>
-   <br><br>
-   <p><h4><b>Заочное отделение</b></h4></p>
-    <a href="#"> Расписание групповых консультаций и практических занятий</a><br><br>
-   <a href="#">Расписание сессии</a><br><br>
-</div>
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
 
-<button class="accordion">Section 3</button>
-<div class="panel">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-
-    <div class="osnov"><h3>Основные сведения<2h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-    <div class="osnov"><h3>Основные сведения</h3></div>
-
-  <script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
-</script>
-
-</figure>
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-2.2.0.min.js"
+      type="text/javascript"
+    ></script>
 
     <footer>
-      <div class="footer">
+      <div class="footer" style="margin-top: 500px">
         <div class="row">
           <a href="#"><i class="fa fa-youtube"></i></a>
           <a href="#"><i class="fa fa-vk"></i></a>

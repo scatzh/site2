@@ -102,7 +102,7 @@ body {
 }
 
 .menu-list li a {
-  color: transparent;
+  color: var(--color-text);
   font-size: 16px;
   font-weight: 500;
   margin-left: 25px;
