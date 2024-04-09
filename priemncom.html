@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>ItcSlider - Example 05</title>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="itc-slider.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/8abed6b128.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="perechen.css" />
+    <link
+      href="/examples/libs/ui-components/itc-slider/itc-slider.css"
+      rel="stylesheet"
+    />
+    <script
+      src="/examples/libs/ui-components/itc-slider/itc-slider.js"
+      defer
+    ></script>
+    <script defer src="itc-slider.js"></script>
+
+    <script defer src="theme.js"></script>
+  </head>
+
+  <body>
+    <svg style="display: none" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="eye" viewBox="0 0 16 16">
+        <path
+          d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"
+        />
+        <path
+          d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"
+        />
+      </symbol>
+    </svg>
+
+   <nav class="navbar">
+      <div class="content">
+         
+       <div class="logo" id="logos"><a href="index.html"><img src="img//logo.png" alt="Кнопка" /></a></div>
+        <ul class="menu-list">
+          <div class="icon cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+          <div class="dropdown">
+            <li>
+              <a href="#" class="dropbtn"
+                >Сведения об образовательной организации</a>
+              <div class="dropdown-content1" >
+                
+                <a href="inform.html">Основные сведения</a>
+                <a href="struktur.html"
+                  >Структура и органы управления образовательной организацией</a
+                >
+                <a href="dokument.html">Документы</a> <a href="obroz.html">Образование</a>
+                
+                
+                <a href="obrozst.html">Образовательные стандарты и требования</a>
+                <a href="rukovodstv.html"
+                  >Руководство. Педагогический (научно-пегагогический) состав</a
+                >
+                <a href="mat-tex.html"
+                  >Материально-техническое обеспечение и оснащенность
+                  образовательного процесса</a
+                >
+                <a href="stipend.html">Стипендии и меры поддержки обучающихся</a>
+                <a href="platnuslug.html">Платные образовательные услуги</a>
+                <a href="finxos.html">Финансово - хозяйственная деятельность</a>
+                <a href="vakant.html"
+                  >Вакантные места для приема (перевода) обучающихся</a
+                >
+                <a href="sreda.html">Доступная среда</a
+                ><a href="#">Международное сотрудничество</a>
+               
+              </div>
+            </li>
+          </div>
+
+          <div class="dropdown">
+            <li>
+              <a href="#" class="dropbtn"> Поступающим</a>
+              <div class="dropdown-content">
+                <a href="perechen.html">Перечень программ</a>
+                <a href="profper.html">Перечень программ ФП "Профессионалитет"</a>
+                <a href="priemncom.html">Приемная комиссия НАМТ</a>
+              </div>
+            </li>
+          </div>
+          <li><a href="student.html">Студентам и педагогам</a></li>
+          <div class="dropdown">
+            <li>
+              <a href="#" class="dropbtn">Мероприятия</a>
+              <div class="dropdown-content">
+                <a href="#">Воспитательная работа</a>
+                <a href="#">Дополнительное образование</a>
+                <a href="#">Студенческий спортивный клуб</a>
+                <a href="#">Конкурсы профессионального мастерства</a>
+              </div>
+            </li>
+          </div>
+
+                 <div class="dropdown">  
+              <li>
+                  
+              <a href="#" class="dropbtn">Пресс-служба</a>
+              <div class="dropdown-content">
+                <a href="#">Контакты</a>
+                <a href="#">Форма обращения</a>
+                <a href="#">Вопросы и ответы</a>
+                </div>
+                  </li>
+                </div>
+
+          
+        </ul>
+       <button id='next' class="themes"  ><img class="img4 " src="" alt=""></button>   
+    
+
+        <div class="icon menu-btn">
+          <i class="fas fa-bars" style="color:#282828 ;"></i>
+        </div>
+       
+      </div>
+         
+    </nav>
+    
+    <div class="about"></div>
+    <div class="img-namt"></div>
+
+    <script>
+      const body = document.querySelector("body");
+      const navbar = document.querySelector(".navbar");
+      const menuBtn = document.querySelector(".menu-btn");
+      const cancelBtn = document.querySelector(".cancel-btn");
+      menuBtn.onclick = () => {
+        navbar.classList.add("show");
+        menuBtn.classList.add("hide");
+        body.classList.add("disabled");
+      };
+      cancelBtn.onclick = () => {
+        body.classList.remove("disabled");
+        navbar.classList.remove("show");
+        menuBtn.classList.remove("hide");
+      };
+      window.onscroll = () => {
+        this.scrollY > 20
+          ? navbar.classList.add("sticky")
+          : navbar.classList.remove("sticky");
+      };
+    </script>
+
+    <script>
+      jQuery(document).ready(function ($) {
+        $("#logos").fadeOut(); //скрываем кнопку
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 50) {
+            // при прокрутке страницы на 200 пикселей вниз
+            $("#logos").fadeIn(); // отображаем кнопку
+          } else {
+            $("#logos").fadeOut(); // в противном случае скрываем
+          }
+        });
+      });
+      jQuery(document).ready(function ($) {
+        $("#next").fadeOut(); //скрываем кнопку
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 50) {
+            // при прокрутке страницы на 200 пикселей вниз
+            $("#next").fadeIn(); // отображаем кнопку
+          } else {
+            $("#next").fadeOut(); // в противном случае скрываем
+          }
+        });
+      });
+    </script>
+    <button class="accordion">Контакты приемной комиссии</button>
+    <div class="panel">
+      <ul class="inf">
+        <li>
+          Телефон приемной комиссии - 8 (831) 214-70-14 (доб.512), 223 кабинет
+        </li>
+        <br />
+        <li>Электронная почта приемной комиссии: priem-namt@mail.ru</li>
+        <br />
+        <li>
+          Режим работы приемной комиссии: с понедельника по пятницу с 08:00 до
+          16:00. Перерыв на обед с 12:00 до 12:30
+        </li>
+        <br />
+        <li>
+          График личного приема граждан приемной комиссией - еженедельно (по
+          пятницам) в 206 кабинете с 14:00 до 16:00
+        </li>
+        <br />
+      </ul>
+    </div>
+    <button class="accordion">Правила приема</button>
+    <div class="panel">
+      <button class="accordionbut">
+        <a
+          href="https://намт.рф/images/documenty/Приемная%20комиссия/Правила_приема_2024.pdf"
+          >Правила приема 2024</a
+        >
+      </button>
+    </div>
+    <button class="accordion">Перечень специальностей 2024</button>
+    <div class="panel">
+      <h3>Очное обучение (бюджет)</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Коды специальности</th>
+            <th>Наименование специальности</th>
+            <th>База обучения</th>
+            <th>Срок обучения</th>
+            <th>Количество мест</th>
+            <th>Квалификация</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span>Коды специальности</span>09.02.07</td>
+            <td>
+              <span>Наименование специальности </span>Информационные системы и
+              программирование
+            </td>
+            <td><span>База обучения </span>9 кл.</td>
+            <td><span>Срок обучения </span>3 года 10 месяцев</td>
+            <td><span>Количество мест </span>25</td>
+            <td><span>Квалификация</span>программист</td>
+          </tr>
+          <tr>
+            <td><span>Коды специальности</span>13.02.13</td>
+            <td>
+              <span>Наименование специальности </span>
+              Эксплуатация и обслуживание электрического и электромеханического
+              оборудования (по отраслям)
+            </td>
+            <td><span>База обучения </span>9 кл.</td>
+            <td><span>Срок обучения </span>2 года 10 месяцев</td>
+            <td><span>Количество мест </span>25</td>
+            <td><span>Квалификация</span>техник</td>
+          </tr>
+          <tr>
+            <td><span>Коды специальности</span>15.02.10</td>
+            <td>
+              <span>Наименование специальности </span>Мехатроника и
+              робототехника (по отраслям)
+            </td>
+            <td><span>База обучения </span>9 кл.</td>
+            <td><span>Срок обучения </span>2 года 10 месяцев</td>
+            <td><span>Количество мест </span>25</td>
+            <td>
+              <span>Квалификация</span>специалист по мехатронике и робототехнике
+            </td>
+          </tr>
+          <tr>
+            <td><span>Коды специальности</span>15.02.16</td>
+            <td>
+              <span>Наименование специальности </span>Технология машиностроения
+            </td>
+            <td><span>База обучения </span>9 кл.</td>
+            <td><span>Срок обучения </span>2 года 10 месяцев</td>
+            <td><span>Количество мест </span>25</td>
+            <td><span>Квалификация</span>техник-технолог</td>
+          </tr>
+          <tr>
+            <td><span>Коды специальности</span>15.02.17</td>
+            <td>
+              <span>Наименование специальности </span>
+              Монтаж, техническое обслуживание, эксплуатация и ремонт
+              промышленного оборудования (по отраслям)
+            </td>
+            <td><span>База обучения </span>9 кл.</td>
+            <td><span>Срок обучения </span>2 года 10 месяцев</td>
+            <td><span>Количество мест </span>25</td>
+            <td><span>Квалификация</span>техник-механик</td>
+          </tr>
+          <tr>
+            <td><span>Коды специальности</span>15.02.18</td>
+            <td>
+              <span>Наименование специальности </span>
+              Техническая эксплуатация и обслуживание роботизированного
+              производства (по отраслям)
+            </td>
+            <td><span>База обучения </span>9 кл.</td>
+            <td><span>Срок обучения </span>2 года 10 месяцев</td>
+            <td><span>Количество мест </span>25</td>
+            <td><span>Квалификация</span>техник</td>
+          </tr>
+          <tr>
+            <td><span>Коды специальности</span>22.02.08</td>
+            <td>
+              <span>Наименование специальности </span>Металлургическое
+              производство (по видам производства)
+            </td>
+            <td><span>База обучения </span>9 кл.</td>
+            <td><span>Срок обучения </span>3 года 10 месяцев</td>
+            <td><span>Количество мест </span>25</td>
+            <td><span>Квалификация</span>техник</td>
+          </tr>
+          <tr>
+            <td><span>Коды специальности</span>23.02.02</td>
+            <td>
+              <span>Наименование специальности </span>Автомобиле- и
+              тракторостроение
+            </td>
+            <td><span>База обучения </span>9 кл.</td>
+            <td><span>Срок обучения </span>2 года 10 месяцев</td>
+            <td><span>Количество мест </span>25</td>
+            <td><span>Квалификация</span>техник</td>
+          </tr>
+          <tr>
+            <td><span>Коды специальности</span>23.02.05</td>
+            <td>
+              <span>Наименование специальности </span>
+              Эксплуатация транспортного электрооборудования и автоматики (по
+              видам транспорта, за исключением водного)
+            </td>
+            <td><span>База обучения </span>9 кл.</td>
+            <td><span>Срок обучения </span>3 года 10 месяцев</td>
+            <td><span>Количество мест </span>25</td>
+            <td><span>Квалификация</span>техник-электромеханик</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Очное обучение (внебюджет)</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Коды специальности</th>
+            <th>Наименование специальности</th>
+            <th>База обучения</th>
+            <th>Срок обучения</th>
+            <th>Количество мест</th>
+            <th>Квалификация</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span>Коды специальности</span>09.02.07</td>
+            <td>
+              <span>Наименование специальности </span>Информационные системы и
+              программирование
+            </td>
+            <td><span>База обучения </span>9 кл.</td>
+            <td><span>Срок обучения </span>3 года 10 месяцев</td>
+            <td><span>Количество мест </span>60</td>
+            <td><span>Квалификация</span>программист</td>
+          </tr>
+          <tr>
+            <td><span>Коды специальности</span>23.02.05</td>
+            <td>
+              <span>Наименование специальности </span>
+              Эксплуатация транспортного электрооборудования и автоматики (по
+              видам транспорта, за исключением водного)
+            </td>
+            <td><span>База обучения </span>9 кл.</td>
+            <td><span>Срок обучения </span>3 года 10 месяцев</td>
+            <td><span>Количество мест </span>30</td>
+            <td><span>Квалификация</span>техник-электромеханик</td>
+          </tr>
+          <tr>
+            <td><span>Коды специальности</span>38.02.01</td>
+            <td>
+              <span>Наименование специальности </span>Экономика и бухгалтерский
+              учет (по отраслям)
+            </td>
+            <td><span>База обучения </span>9 кл.</td>
+            <td><span>Срок обучения </span>2 года 10 месяцев</td>
+            <td><span>Количество мест </span>60</td>
+            <td><span>Квалификация</span>бухгалтер</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Заочное обучение</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Коды специальности</th>
+            <th>Наименование специальности</th>
+            <th>База обучения</th>
+            <th>Срок обучения</th>
+            <th>Количество мест</th>
+            <th>Форма обучения</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span>Коды специальности</span> 15.02.16</td>
+            <td>
+              <span>Наименование специальности </span>ИнфТехнология
+              машиностроения
+            </td>
+            <td><span>База обучения </span>11 кл.</td>
+            <td><span>Срок обучения </span>3 года 10 месяцев</td>
+            <td><span>Количество мест </span>25</td>
+            <td><span>Форма обучения</span>бюджет</td>
+          </tr>
+          <tr>
+            <td><span>Коды специальности</span>38.02.01</td>
+            <td>
+              <span>Наименование специальности </span>
+              Экономика и бухгалтерский учет (по отраслям)
+            </td>
+            <td><span>База обучения </span>11 кл.</td>
+            <td><span>Срок обучения </span>2 года 10 месяцев</td>
+            <td><span>Количество мест </span>30</td>
+            <td><span>Форма обучения</span>внебюджет</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <button class="accordion">Фильм о техникуме</button>
+    <div class="panel">
+      <button class="accordionbut">
+        <a href="https://www.youtube.com/watch?v=je9uf36DMUc">
+          Описание видов профессиональной деятельности специальностей
+        </a>
+      </button>
+    </div>
+    <button class="accordion">Бланки заявлений</button>
+    <div class="panel">
+      <button class="accordionbut">
+        <a
+          href="https://docs.google.com/document/d/15VD4DmKdQR14dsgDai0Pm0pXZqBwKKGt/edit"
+        >
+          очное обучение
+        </a>
+      </button>
+      <button class="accordionbut">
+        <a
+          href="https://docs.google.com/document/d/1zon4pysj-x9aKAlJzS1CMSQUYQKaZyBK/edit"
+        >
+          заочное обучение
+        </a>
+      </button>
+    </div>
+    <button class="accordion">Фильм о техникуме</button>
+    <div class="panel">
+      <button class="accordionbut">
+        <a href="#"> Скачать(потом тк это rar файл) </a>
+      </button>
+    </div>
+    <button class="accordion">Образцы заполнения бланков заявлений</button>
+    <div class="panel">
+      <button class="accordionbut">
+        <a
+          href="https://docs.google.com/spreadsheets/d/1FkC0tAeFf9LEk1IIb4oXMgSgoUPvNx_J/edit#gid=2102594408"
+        >
+          Открыть
+        </a>
+      </button>
+    </div>
+    <button class="accordion">Расчет среднего балла</button>
+    <div class="panel">
+      <button class="accordionbut">
+        <a href="https://www.center-pss.ru/math/raschet-srednego-balla.htm">
+          Расчет среднего балла онлайн
+        </a>
+      </button>
+    </div>
+    <button class="accordion">Бланки договоров на обучение (бюджет)</button>
+    <div class="panel">
+      <button class="accordionbut">
+        <a
+          href="https://drive.google.com/drive/folders/1r8UIxonO5dbx9j6xv-3jwFbQTzP5jHc7"
+        >
+          Договора оформляются только после зачисления (19 августа)
+        </a>
+      </button>
+    </div>
+    <button class="accordion">Перечень документов для подачи заявления</button>
+    <div class="panel">
+      <ul class="inf">
+        <li>Аттестат (оригинал и/или копия)</li>
+        <br />
+        <li>Заявление</li>
+        <br />
+        <li>Паспорт</li>
+        <br />
+        <li>Фотографии 4 шт</li>
+        <br />
+      </ul>
+      <p class="inf">
+        Подать документы можно лично, с использованием электронной почты (
+        priem-namt@mail.ru), с использованием функционала (сервисов)
+        региональных порталов государственных и муниципальных услуг или с
+        использованием операторов почтовой связи
+      </p>
+    </div>
+    <button class="accordion">
+      Перечень документов, необходимых для зачисления
+    </button>
+    <div class="panel">
+      <ul class="inf">
+        <li>Аттестат (оригинал) + копия</li>
+        <br />
+        <li>Копия паспорта 2 шт</li>
+        <br />
+        <li>Фотографии 4 шт + 2 шт</li>
+        <br />
+        <li>Заявление</li>
+        <br />
+        <li>Анкета</li>
+        <br />
+        <li>Прививочный сертификат</li>
+        <br />
+        <li>Медицинская справка 08 6-у</li>
+        <br />
+        <li>Копия СНИЛС 2 шт</li>
+        <br />
+        <li>Копия ИНН</li>
+        <br />
+        <li>Копия мед.полиса (с двух сторон)</li>
+        <br />
+        <li>Согласие на обработку персональных данных</li>
+        <br />
+        <li>Согласие на общественно-полезный труд</li>
+        <br />
+        <li>Договор на образовательные услуги</li>
+        <br />
+      </ul>
+    </div>
+    <button class="accordion">
+      Условия приема на обучение по договорам об оказании платных
+      образовательных услуг
+    </button>
+    <div class="panel">
+      <button class="accordionbut">
+        <a
+          href="https://намт.рф/images/documenty/Приемная%20комиссия/Условия_приема_на_обучение_по_договорам_об_оказании_платных_образовательных_услуг.pdf"
+        >
+          Условия приема на обучение по договорам об оказании платных
+          образовательных услуг оговорены в порядке оказания платных
+          образовательных услуг
+        </a>
+      </button>
+    </div>
+    <p class="inf"><h4 style="margin-left: 5%;"><b>Поступление осуществляется без вступительных испытаний</b></h4></p><br>
+    <p class="inf"><h4 style="margin-left: 5%;">ВАЖНО: Общежитие обучающимся не предоставляется</h4></p><br>
+    <p class="inf"><h4 style="margin-left: 5%;">Прохождение для поступления на обучение поступающими обязательного предварительного медицинского осмотра (обследования) не требуется</h4></p>
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    </script>
+    <script
+      src="https://code.jquery.com/jquery-2.2.0.min.js"
+      type="text/javascript"
+    ></script>
+
+    <footer>
+      <div class="footer" style="margin-top: 300px">
+        <div class="row">
+          <a href="#"><i class="fa fa-youtube"></i></a>
+          <a href="#"><i class="fa fa-vk"></i></a>
+        </div>
+
+        <div class="row">
+          <ul>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Приемная комиссия</a></li>
+            <li><a href="#">Политика конфиденциальности</a></li>
+            <li><a href="#">Как добраться</a></li>
+            <li><a href="#">Создатели </a></li>
+          </ul>
+        </div>
+
+        <div class="row">© 2024 НАМТ</div>
+      </div>
+    </footer>
+  </body>
+</html>

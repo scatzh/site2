@@ -31,6 +31,24 @@ body {
   color: var(--color-text);
 }
 
+.container {
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::selection {
+  background: rgb(0, 123, 255, 0.3);
+}
 .content {
   max-width: 1650px;
   margin: auto;
@@ -413,25 +431,416 @@ a:hover {
   text-decoration: underline;
   color: #0094de;
 }
-table {
-  margin: auto;
-  align-items: center;
-  justify-content: center;
-  max-width: 800px;
-  border-top: 7px;
-  border-collapse: collapse;
-  text-align: center;
-  margin-bottom: 20px;
-  border: 1px solid #dddddd;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-td {
-  text-align: left;
-  padding: 10px;
-  border: 3px solid var(--color-bg);
-}
-th {
+h1 {
+  font-size: 5.25vmin;
   text-align: center;
-  padding: 10px;
-  border: 3px solid var(--color-text);
+  color: white;
+}
+p {
+  font-size: max(10pt, 22px);
+  line-height: 1.4;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 85vmin;
+  height: 65vmin;
+  margin: 2rem auto;
+  border: 8px solid;
+  border: var(--color-bg);
+  transition: 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0.75rem;
+  background: var(--color-bg);
+  transition: 0.4s ease-in-out;
+  z-index: 1;
+}
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 15vmin;
+  height: 100%;
+  padding: 0.5rem 0 0 0.5rem;
+  border: 3px solid;
+  border-image: linear-gradient(
+      to bottom,
+      #aea724 5%,
+      forestgreen 35% 65%,
+      #aea724 95%
+    )
+    0 0 0 100%;
+  transition: 0.3s ease-in-out 0.2s;
+  z-index: 1;
+}
+
+.image-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vmin;
+  height: 100%;
+  background-image: url("img/machino.png");
+  background-size: cover;
+  transition: 0.3s ease-in-out;
+  /* border: 1px solid green; */
+}
+.img {
+  background-image: url("img/programmers.png");
+}
+.img {
+  background-image: url("img/programmers.png");
+}
+.img1 {
+  background-image: url("img/machino.png");
+}
+.img2 {
+  background-image: url("img/avto.png");
+}
+.img3 {
+  background-image: url("img/electro.png");
+}
+.img4 {
+  background-image: url("img/econom.png");
+}
+.img11 {
+  background-image: url("img/shitok.png");
+}
+.img12 {
+  background-image: url("img/mexatron.png");
+}
+.img13 {
+  background-image: url("img/montax.png");
+}
+.img14 {
+  background-image: url("img/osnash.png");
+}
+.img15 {
+  background-image: url("img/machino.png");
+}
+.inset {
+  max-width: 50%;
+  margin: 0.25em 1em 1em 0;
+  border-radius: 0.25em;
+  float: left;
+}
+
+.dots {
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 55px;
+  height: 4vmin;
+  transition: 0.3s ease-in-out 0.3s;
+}
+.dot {
+  width: 14px;
+  height: 14px;
+  background: yellow;
+  border: 1px solid indigo;
+  border-radius: 50%;
+  transition: 0.3s ease-in-out 0.3s;
+}
+
+.text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60vmin;
+  height: 100%;
+  padding: 3vmin 4vmin;
+  background: var(--color-bg);
+  box-shadow: inset 1px 1px 15px 0 rgba(0 0 0 / 0.4);
+  overflow-y: scroll;
+}
+
+.wrap:hover .overlay {
+  transform: translateX(-60vmin);
+  .table {
+    color: transparent;
+    font-size: 0.1em;
+  }
+}
+.table {
+  font-size: 30px;
+}
+.wrap:hover .image-content {
+  width: 30vmin;
+}
+.wrap:hover .overlay-content {
+  border: none;
+  transition-delay: 0.2s;
+  transform: translateX(60vmin);
+}
+.wrap:hover .dots {
+  transform: translateX(1rem);
+}
+.wrap:hover .dots .dot {
+  background: var(--color-bg);
+}
+
+/* Animations and timing delays */
+.animate {
+  animation-duration: 0.7s;
+  animation-timing-function: cubic-bezier(0.26, 0.53, 0.74, 1.48);
+  animation-fill-mode: backwards;
+}
+/* Pop In */
+.pop {
+  animation-name: pop;
+}
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+/* Slide In */
+.slide {
+  animation-name: slide;
+}
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translate(4em, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+/* Slide Left */
+.slide-left {
+  animation-name: slide-left;
+}
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translate(-40px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+.slide-up {
+  animation-name: slide-up;
+}
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(3em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.delay-1 {
+  animation-delay: 0.3s;
+}
+.delay-2 {
+  animation-delay: 0.6s;
+}
+.delay-3 {
+  animation-delay: 0.9s;
+}
+.delay-4 {
+  animation-delay: 1.2s;
+}
+.delay-5 {
+  animation-delay: 1.5s;
+}
+.delay-6 {
+  animation-delay: 1.8s;
+}
+.delay-7 {
+  animation-delay: 2.1s;
+}
+.delay-8 {
+  animation-delay: 2.4s;
+}
+.prf {
+  font-size: 22px;
+}
+
+/* Default table styles for this demo */
+table {
+  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
+}
+table tr {
+  background: var(--color-bg);
+  border-bottom: 1px solid;
+}
+table th,
+table td {
+  padding: 10px 20px;
+}
+table td span {
+  background: var(--color-bg);
+  color: dimgrey;
+  display: none;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 5px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0;
+  left: 0;
+}
+
+/* Simple CSS for flexbox table on mobile */
+@media (max-width: 1080px) {
+  table thead {
+    left: -9999px;
+    position: absolute;
+    visibility: hidden;
+  }
+  table tr {
+    border-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  table td {
+    border: 1px solid;
+    margin: 0 -1px -1px 0;
+    padding-top: 35px;
+    position: relative;
+    width: 50%;
+  }
+  table td span {
+    display: block;
+  }
+}
+
+/* Slider */
+.slick-slide {
+  margin: 0px 10px;
+}
+.slick-slide img {
+  width: 100%;
+}
+
+.accordion {
+  border: 3px var(--color-text);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 18px;
+  width: 80%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+
+.active,
+.accordion:hover {
+  background-color: gray;
+  border: 3px var(--color-text);
+}
+
+.panel {
+  margin-left: 45px;
+  border: 3px var(--color-text);
+  padding: 0 18px;
+  display: none;
+  background-color: var(--color-bg);
+  overflow: hidden;
+}
+.accordionbut {
+  border: 3px var(--color-text);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 18px;
+  width: 80%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.active,
+.accordionbut:hover {
+  background-color: gray;
+  border: 3px var(--color-text);
+}
+.accordionspis {
+  border: 3px var(--color-text);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  cursor: pointer;
+  padding: 18px;
+  width: 80%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.active,
+.accordionspis:hover {
+  background-color: gray;
+  border: 3px var(--color-text);
+}
+a:link {
+  color: var(--color-text);
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+  color: var(--color-text);
+}
+a:hover {
+  text-decoration: underline;
+  color: var(--color-text);
+}
+.inf {
+  font-size: 20px;
+}
+@media (max-width: 500px) {
+  .inf {
+    font-size: 15px;
+  }
 }
