@@ -8,15 +8,46 @@
   href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
   rel="stylesheet"
 />
+<script
+  type="text/javascript"
+  src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"
+/>
+<link
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
+
+
+<link
+  href="/examples/libs/ui-components/itc-slider/itc-slider.css"
+  rel="stylesheet"
+/>
+<script
+  src="/examples/libs/ui-components/itc-slider/itc-slider.js"
+  defer
+></script>
+<link  defer src="thema.js"/>
 <link rel="stylesheet" href="1.css" type="text/css" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> header</title>
+  </head>
 <nav id="menu">
   <div class="imaga" id="logos">
-    <a href="#"><img src="logo.png" alt="Кнопка" /></a>
+    <a href="index.html"><img src="logo.png" alt="Кнопка" /></a>
   </div>
 
   <div class="menu-item highlight">
     <div class="menu-text">
-      <a href="#">Сведения об организации</a>
+      <a href="#">Сведения об техникуме</a>
     </div>
     <div class="sub-menu double">
       <div class="icon-box">
@@ -70,7 +101,7 @@
             Материально-техническое обеспечение и оснащенность
             <i class="far fa-arrow-right"></i>
           </div>
-          <div class="sub-text">и оснащенность образовательного процесса</div>
+          <div class="sub-text">образовательного процесса</div>
         </div>
       </div>
 
@@ -235,4 +266,135 @@
   <div id="sub-menu-container">
     <div id="sub-menu-holder"></div>
   </div>
+
+  </div>
+  <div class="wrapper" style="padding-top: 2px;">
+      <input type="checkbox" id="hide-checkbox" />
+      <label for="hide-checkbox" class="toggle">
+        <span class="toggle-button">
+          <span class="crater crater-1"></span>
+          <span class="crater crater-2"></span>
+          <span class="crater crater-3"></span>
+          <span class="crater crater-4"></span>
+          <span class="crater crater-5"></span>
+          <span class="crater crater-6"></span>
+          <span class="crater crater-7"></span>
+        </span>
+        <span class="star star-1"></span>
+        <span class="star star-2"></span>
+        <span class="star star-3"></span>
+        <span class="star star-4"></span>
+        <span class="star star-5"></span>
+        <span class="star star-6"></span>
+        <span class="star star-7"></span>
+        <span class="star star-8"></span>
+      </label>
+    </div>
+  
 </nav>
+<div class="navi">
+   <div class="imaga" id="logos">
+    <a href="index.html"><img src="logo.png" alt="Кнопка" /></a>
+  </div>
+  <div class="wrapper">
+ 
+    <input type="radio" name="slider" id="menu-btn" />
+    <input type="radio" name="slider" id="close-btn" />
+    <ul class="nav-links">
+      <label for="close-btn" class="btn close-btn"
+        ><i class="fas fa-times"></i
+      ></label>
+      <li>
+        <a href="#" class="desktop-item">Dropdown Menu</a>
+        <input type="checkbox" id="showDrop" />
+        <label for="showDrop" class="mobile-item">Сведения об техникуме</label>
+        <ul class="drop-menu">
+          <li><a href="#">Основные сведения</a></li>
+          <li><a href="#">Структура и органы управления</a></li>
+          <li><a href="#">Документы</a></li>
+          <li><a href="#">Образование</a></li>
+           <li><a href="#">Образовательные стандарты</a></li>
+          <li><a href="#">Руководство</a></li>
+          <li><a href="#">Мат-тех обеспечение</a></li>
+          <li><a href="#">Стипендии</a></li>
+           <li><a href="#">Платные образовательные услуги</a></li>
+          <li><a href="#">Фин-хоз деятельность</a></li>
+          <li><a href="#">Вакантные места</a></li>
+          <li><a href="#">Доступная среда</a></li>
+            <li><a href="#">Международное сотрудничество</a></li>
+        </ul>
+        
+      </li>
+    <li>
+        <a href="#" class="desktop-item">Dropdown Menu</a>
+   <input type="checkbox" id="showDrop1" />
+        <label for="showDrop1" class="mobile-item">Поступающим</label>
+         <ul class="drop-menu">
+            <li><a href="#">Перечень программ</a></li>
+          <li><a href="#">Перечень программ ФП "Профессионалитет"</a></li>
+          <li><a href="#">Приемная комиссия НАМТ</a></li>
+          
+        </ul>
+        </li>
+
+      <li><a href="#">Студентам и педагогам</a></li>
+       <li>
+        <a href="#" class="desktop-item">Dropdown Menu</a>
+   <input type="checkbox" id="showDrop2" />
+        <label for="showDrop2" class="mobile-item">Мероприятия</label>
+         <ul class="drop-menu">
+            <li><a href="#">Воспитательная работа</a></li>
+          <li><a href="#">Дополнительное образование</a></li>
+          <li><a href="#">Студенческий спортивный клуб</a></li>
+           <li><a href="#">Конкурсы профессионального мастерства</a></li>
+          
+        </ul>
+        </li>
+          <li>
+        <a href="#" class="desktop-item">Dropdown Menu</a>
+   <input type="checkbox" id="showDrop3" />
+        <label for="showDrop3" class="mobile-item">Пресс-служба</label>
+         <ul class="drop-menu">
+            <li><a href="#">Контакты </a></li>
+          <li><a href="#">Форма обращения </a></li>
+          <li><a href="#">Вопросы и ответы </a></li>
+          
+        </ul>
+        </li>
+    </ul>
+    <div class="soder">
+    <input type="checkbox" id="toggle_checkbox">
+
+    <div class="wrapper">
+      <input type="checkbox" name="color_mode" id="color_mode" />
+      <label for="hide-checkbox" class="toggle">
+        <span class="toggle-button">
+          <span class="crater crater-1"></span>
+          <span class="crater crater-2"></span>
+          <span class="crater crater-3"></span>
+          <span class="crater crater-4"></span>
+          <span class="crater crater-5"></span>
+          <span class="crater crater-6"></span>
+          <span class="crater crater-7"></span>
+        </span>
+        <span class="star star-1"></span>
+        <span class="star star-2"></span>
+        <span class="star star-3"></span>
+        <span class="star star-4"></span>
+        <span class="star star-5"></span>
+        <span class="star star-6"></span>
+        <span class="star star-7"></span>
+        <span class="star star-8"></span>
+      </label>
+    </div>
+  
+
+
+    <label for="menu-btn" class="btn menu-btn"
+      ><i class="fas fa-bars"></i
+    ></label>
+  
+  </div>
+</div>
+
+
