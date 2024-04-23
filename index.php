@@ -106,12 +106,12 @@
           <li><a href="student.html">Студентам и педагогам</a></li>
           <div class="dropdown">
             <li>
-              <a href="1.html" class="dropbtn">Мероприятия</a>
+              <a href="includes/header.php" class="dropbtn">Мероприятия</a>
               <div class="dropdown-content">
-                <a href="#">Воспитательная работа</a>
-                <a href="#">Дополнительное образование</a>
-                <a href="#">Студенческий спортивный клуб</a>
-                <a href="#">Конкурсы профессионального мастерства</a>
+                <a href="studclub.html">Воспитательная работа</a>
+                <a href="dopobroz.html">Дополнительное образование</a>
+                <a href="studclub.php">Студенческий спортивный клуб</a>
+                <a href="konkurs.php">Конкурсы профессионального мастерства</a>
               </div>
             </li>
           </div>

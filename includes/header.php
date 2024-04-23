@@ -1,6 +1,356 @@
-:root {
-  --menu-width: 70em; /* Width of menu */
-  --items: 7; /* Number of items you have */
+
+<script
+  src="https://kit.fontawesome.com/628c8d2499.js"
+  crossorigin="anonymous"
+></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+  rel="stylesheet"
+/>
+<script
+  type="text/javascript"
+  src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"
+></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"
+/>
+<link
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
+
+
+
+<script src="thema.js"></script>
+<link  defer src="thema.js"/>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> header</title>
+  </head>
+<nav id="menu">
+  <div class="imaga" id="logos">
+    <a href="index.php"><img src="logo.png" alt="Кнопка" /></a>
+  </div>
+
+  <div class="menu-item highlight">
+    <div class="menu-text">
+      <a href="#">Сведения об техникуме</a>
+    </div>
+    <div class="sub-menu double">
+      <div class="icon-box">
+        <div class="text">
+          <div class="title">
+            Основные сведения <i class="far fa-arrow-right"></i>
+          </div>
+          <div class="sub-text">Об организации</div>
+        </div>
+      </div>
+      <div class="icon-box">
+        <div class="text">
+          <div class="title">
+            Структура и органы управления <i class="far fa-arrow-right"></i>
+          </div>
+          <div class="sub-text">Организацией</div>
+        </div>
+      </div>
+      <div class="icon-box">
+        <div class="text">
+          <div class="title">Документы <i class="far fa-arrow-right"></i></div>
+        </div>
+      </div>
+      <div class="icon-box">
+        <div class="text">
+          <div class="title">
+            Образование <i class="far fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+      <div class="icon-box">
+        <div class="text">
+          <div class="title">
+            Образовательные стандарты <i class="far fa-arrow-right"></i>
+          </div>
+          <div class="sub-text">И требования</div>
+        </div>
+      </div>
+      <div class="icon-box">
+        <div class="text">
+          <div class="title">
+            Руководство. Педагогический состав
+            <i class="far fa-arrow-right"></i>
+          </div>
+          <div class="sub-text">(научно-пегагогический)</div>
+        </div>
+      </div>
+      <div class="icon-box">
+        <div class="text">
+          <div class="title">
+            Материально-техническое обеспечение и оснащенность
+            <i class="far fa-arrow-right"></i>
+          </div>
+          <div class="sub-text">образовательного процесса</div>
+        </div>
+      </div>
+
+      <div class="icon-box">
+        <div class="text">
+          <div class="title">
+            Стипендии
+            <i class="far fa-arrow-right"></i>
+          </div>
+          <div class="sub-text">и меры поддержки обучающихся</div>
+        </div>
+      </div>
+
+      <div class="icon-box">
+        <div class="text">
+          <div class="title">
+            Платные образовательные услуги
+            <i class="far fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="icon-box">
+        <div class="text">
+          <div class="title">
+            Финансово - хозяйственная деятельность
+            <i class="far fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="icon-box">
+        <div class="text">
+          <div class="title">
+            Вакантные места
+            <i class="far fa-arrow-right"></i>
+          </div>
+          <div class="sub-text">для приема (перевода) обучающихся</div>
+        </div>
+      </div>
+      <div class="icon-box">
+        <div class="text">
+          <div class="title">
+            Доступная среда
+            <i class="far fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+      <div class="icon-box">
+        <div class="text">
+          <div class="title">
+            Международное сотрудничество
+            <i class="far fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <div class="menu-text">
+      <a href="#">Поступающим</a>
+    </div>
+    <div class="sub-menu">
+      <div class="icon-box">
+        <div class="text">
+          <div class="title">
+            Перечень программ <i class="far fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+      <div class="icon-box">
+        <div class="text">
+          <div class="title">
+            Перечень программ ФП "Профессионалитет"
+            <i class="far fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+      <div class="icon-box">
+        <div class="text">
+          <div class="title">
+            Приемная комиссия НАМТ <i class="far fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+      <div class="sub-menu-holder"></div>
+    </div>
+  </div>
+  <div class="textas">
+    <div class="menu-text">
+      <a href="#">Студентам и педагогам</a>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <div class="menu-text">
+      <a href="#">Мероприятия </a>
+    </div>
+    <div class="sub-menu">
+      <div class="icon-box">
+        <div class="text">
+          <div class="title">
+            Воспитательная работа <i class="far fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+         <a href="dopobroz.php"> <div class="icon-box">
+        <div class="text">
+          <div class="title">
+         Дополнительное образование
+            <i class="far fa-arrow-right"></i>
+          </div>
+        </div>
+      </div></a>
+        <a href="studclub.php"> <div class="icon-box">
+        <div class="text">
+          <div class="title">
+          Студенческий спортивный клуб <i class="far fa-arrow-right"></i>
+          </div>
+        </div>
+      </div></a>
+     <a href="konkurs.php">  <div class="icon-box">
+        <div class="text">
+          <div class="title">
+           Конкурсы профессионального мастерства
+            <i class="far fa-arrow-right"></i>
+          </div>
+        </div>
+      </div></a>
+      <div class="sub-menu-holder"></div>
+    </div>
+  </div>
+
+  <div class="menu-item">
+    <div class="menu-text">
+      <a href="#">Пресс-служба</a>
+    </div>
+    <div class="sub-menu">
+      <div class="icon-box">
+        <div class="text">
+          <div class="title">Контакты <i class="far fa-arrow-right"></i></div>
+        </div>
+      </div>
+      <div class="icon-box">
+        <div class="text">
+          <div class="title">
+            Форма обращения <i class="far fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+      <div class="icon-box">
+        <div class="text">
+          <div class="title">
+            Вопросы и ответы <i class="far fa-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+      <div class="sub-menu-holder"></div>
+    </div>
+  </div>
+  <div id="sub-menu-container">
+    <div id="sub-menu-holder"></div>
+  </div>
+
+  </div>
+
+</nav>
+<div class="navi">
+   <div class="imaga" id="logos">
+    <a href="index.html"><img src="logo.png" alt="Кнопка" /></a>
+  </div>
+  <div class="wrapper">
+ 
+    <input type="radio" name="slider" id="menu-btn" />
+    <input type="radio" name="slider" id="close-btn" />
+    <ul class="nav-links">
+      <label for="close-btn" class="btn close-btn"
+        ><i class="fas fa-times"></i
+      ></label>
+      <li>
+        <a href="#" class="desktop-item">Dropdown Menu</a>
+        <input type="checkbox" id="showDrop" />
+        <label for="showDrop" class="mobile-item">Сведения об техникуме</label>
+        <ul class="drop-menu">
+          <li><a href="#">Основные сведения</a></li>
+          <li><a href="#">Структура и органы управления</a></li>
+          <li><a href="#">Документы</a></li>
+          <li><a href="#">Образование</a></li>
+           <li><a href="#">Образовательные стандарты</a></li>
+          <li><a href="#">Руководство</a></li>
+          <li><a href="#">Мат-тех обеспечение</a></li>
+          <li><a href="#">Стипендии</a></li>
+           <li><a href="#">Платные образовательные услуги</a></li>
+          <li><a href="#">Фин-хоз деятельность</a></li>
+          <li><a href="#">Вакантные места</a></li>
+          <li><a href="#">Доступная среда</a></li>
+            <li><a href="#">Международное сотрудничество</a></li>
+        </ul>
+        
+      </li>
+    <li>
+        <a href="#" class="desktop-item">Dropdown Menu</a>
+   <input type="checkbox" id="showDrop1" />
+        <label for="showDrop1" class="mobile-item">Поступающим</label>
+         <ul class="drop-menu">
+            <li><a href="#">Перечень программ</a></li>
+          <li><a href="#">Перечень программ ФП "Профессионалитет"</a></li>
+          <li><a href="#">Приемная комиссия НАМТ</a></li>
+          
+        </ul>
+        </li>
+
+      <li><a href="#">Студентам и педагогам</a></li>
+       <li>
+        <a href="#" class="desktop-item">Dropdown Menu</a>
+   <input type="checkbox" id="showDrop2" />
+        <label for="showDrop2" class="mobile-item">Мероприятия</label>
+         <ul class="drop-menu">
+            <li><a href="#">Воспитательная работа</a></li>
+          <li><a href="dopobroz.php">Дополнительное образование</a></li>
+          <li><a href="studclub.php">Студенческий спортивный клуб</a></li>
+           <li><a href="konkurs.php">Конкурсы профессионального мастерства</a></li>
+          
+        </ul>
+        </li>
+          <li>
+        <a href="#" class="desktop-item">Dropdown Menu</a>
+   <input type="checkbox" id="showDrop3" />
+        <label for="showDrop3" class="mobile-item">Пресс-служба</label>
+         <ul class="drop-menu">
+            <li><a href="#">Контакты </a></li>
+          <li><a href="#">Форма обращения </a></li>
+          <li><a href="#">Вопросы и ответы </a></li>
+          
+        </ul>
+        </li>
+    </ul>
+    
+
+
+    <label for="menu-btn" class="btn menu-btn"
+      ><i class="fas fa-bars"></i
+    ></label>
+  
+  </div>
+</div>
+
+
+
+<style>
+  :root {
+  --menu-width: 60em; /* Width of menu */
+  --items: 6; /* Number of items you have */
   --item-width: calc(var(--menu-width) / var(--items));
 }
 @media (max-width: 1920) {
@@ -12,10 +362,14 @@ body {
   margin: 0;
   padding: 0;
   background: linear-gradient(45deg, #102eff, #d2379b);
+  background-attachment: fixed;
   font-family: "Roboto", sans-serif;
   height: 100vh;
 
-  width: 100vw;
+  width: 100%;
+}
+body.dark {
+  background: black;
 }
 body nav {
   position: sticky;
@@ -516,11 +870,7 @@ nav
     display: inline-flex;
   }
 
-  .soder {
-    padding-left: 10px;
-    display: inline-flex;
-    align-items: center;
-  }
+ 
   .imaga {
     width: 10vh;
   }
@@ -532,8 +882,8 @@ nav
   .wrapper .nav-links {
     position: fixed;
     height: 100vh;
-    width: 30vh;
-
+    width: 35vh;
+    z-index: 9999;
     top: 0;
     left: -100%;
     background: #242526;
@@ -668,313 +1018,6 @@ nav
 /*
 Кнопка для переключения тем
 */
-@import url("https://fonts.googleapis.com/css?family=Nunito:800i&display=swap");
 
-* {
-  box-sizing: inherit;
-}
 
-#hide-checkbox {
-  opacity: 0;
-  height: 0;
-  width: 0;
-}
-
-.toggle {
-  position: relative;
-  cursor: pointer;
-  display: inline-block;
-  width: 100px;
-  height: 50px;
-  background: #211042;
-  border-radius: 50px;
-  transition: 500ms;
-  overflow: hidden;
-}
-
-.toggle-button {
-  position: absolute;
-  display: inline-block;
-  top: 3.5px;
-  left: 3px;
-  width: 43px;
-  height: 43px;
-  border-radius: 50%;
-  background: #faeaf1;
-  overflow: hidden;
-  box-shadow: 0 0 35px 4px rgba(255, 255, 255);
-  transition: all 500ms ease-out;
-}
-
-.crater {
-  position: absolute;
-  display: inline-block;
-  background: #faeaf1;
-  border-radius: 50%;
-  transition: 500ms;
-}
-
-.crater-1 {
-  background: #fffff9;
-  width: 43px;
-  height: 43px;
-  left: 5px;
-  bottom: 5px;
-}
-
-.crater-2 {
-  width: 10px;
-  height: 10px;
-  top: -7px;
-  left: 22px;
-}
-
-.crater-3 {
-  width: 8px;
-  height: 8px;
-  top: 10px;
-  right: -2px;
-}
-
-.crater-4 {
-  width: 5px;
-  height: 5px;
-  top: 12px;
-  left: 15px;
-}
-
-.crater-5 {
-  width: 7.5px;
-  height: 7.5px;
-  top: 20px;
-  left: 24px;
-}
-
-.crater-6 {
-  width: 5px;
-  height: 5px;
-  top: 24px;
-  left: 10px;
-}
-
-.crater-7 {
-  width: 6px;
-  height: 6px;
-  bottom: 2.5px;
-  left: 17.5px;
-}
-
-.star {
-  position: absolute;
-  display: inline-block;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 1px 0 2px 2px rgba(255, 255, 255);
-}
-
-.star-1 {
-  width: 3px;
-  height: 3px;
-  right: 45px;
-  bottom: 20px;
-}
-
-.star-2 {
-  width: 2px;
-  height: 2px;
-  right: 35px;
-  top: 5px;
-}
-
-.star-3 {
-  width: 2.5px;
-  height: 2.5px;
-  right: 30px;
-  bottom: 7.5px;
-}
-
-.star-4 {
-  width: 1.5px;
-  height: 1.5px;
-  right: 20px;
-  bottom: 25px;
-}
-
-.star-5 {
-  width: 2px;
-  height: 2px;
-  right: 5px;
-  bottom: 17.5px;
-}
-
-.star-6,
-.star-7,
-.star-8 {
-  width: 5px;
-  height: 1px;
-  border-radius: 1px;
-  transform: rotate(-45deg);
-  box-shadow: 5px 0px 4px 1px #fff;
-  animation-name: travel;
-  animation-duration: 1.5s;
-  animation-timing-function: ease-out;
-  animation-iteration-count: infinite;
-}
-
-.star-6 {
-  right: 15px;
-  bottom: 15px;
-  animation-delay: -2s;
-}
-
-.star-7 {
-  right: 30px;
-  bottom: 30px;
-}
-
-.star-8 {
-  right: 45px;
-  top: 5px;
-  animation-delay: -4s;
-}
-
-@keyframes travel {
-  0% {
-    transform: rotate(-45deg) translateX(70px);
-  }
-
-  50% {
-    transform: rotate(-45deg) translateX(-20px);
-    box-shadow: 5px 0px 6px 1px #fff;
-  }
-
-  100% {
-    transform: rotate(-45deg) translateX(-30px);
-    width: 1px;
-    height: 1px;
-    opacity: 0;
-    box-shadow: none;
-  }
-}
-
-#hide-checkbox:checked + .toggle {
-  background: #24d7f7;
-}
-
-#hide-checkbox:checked + .toggle .toggle-button {
-  background: #f7ffff;
-  transform: translateX(51px);
-  box-shadow: 0 0 35px 5px rgba(255, 255, 255);
-}
-
-#hide-checkbox:checked + .toggle .toggle-button .crater {
-  transform: rotate(-45deg) translateX(70px);
-}
-
-#hide-checkbox:checked + .toggle .star {
-  animation: move 2s infinite;
-  transform: none;
-  box-shadow: none;
-}
-
-#hide-checkbox:checked + .toggle .star-1 {
-  width: 20px;
-  height: 5px;
-  border-radius: 5px;
-  background: #fff;
-  left: 10px;
-  top: 12.5px;
-  box-shadow: none;
-}
-
-#hide-checkbox:checked + .toggle .star-2 {
-  width: 6px;
-  height: 6px;
-  background: #fff;
-  left: 13px;
-  top: 11.5px;
-  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
-}
-
-#hide-checkbox:checked + .toggle .star-3 {
-  width: 8px;
-  height: 8px;
-  background: #fff;
-  left: 17.5px;
-  top: 9.5px;
-  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
-}
-
-#hide-checkbox:checked + .toggle .star-4 {
-  width: 7px;
-  height: 7px;
-  background: #fff;
-  left: 23px;
-  top: 10.5px;
-  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
-}
-
-#hide-checkbox:checked + .toggle .star-5 {
-  width: 30px;
-  height: 7.5px;
-  border-radius: 7.5px;
-  background: #fff;
-  left: 15px;
-  bottom: 10px;
-  box-shadow: none;
-}
-
-#hide-checkbox:checked + .toggle .star-6 {
-  width: 9px;
-  height: 9px;
-  background: #fff;
-  border-radius: 50%;
-  left: 19px;
-  bottom: 10px;
-  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
-}
-
-#hide-checkbox:checked + .toggle .star-7 {
-  width: 12px;
-  height: 12px;
-  background: #fff;
-  border-radius: 50%;
-  left: 12px;
-  bottom: 12px;
-  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
-}
-
-#hide-checkbox:checked + .toggle .star-8 {
-  width: 10.5px;
-  height: 10.5px;
-  background: #fff;
-  border-radius: 50%;
-  left: 35px;
-  top: 34.5px;
-  box-shadow: -1px 0 2px 0 rgba(0, 0, 0, 0.1);
-}
-
-@keyframes move {
-  0% {
-    transform: none;
-  }
-
-  25% {
-    transform: translateX(2px);
-  }
-
-  100% {
-    transform: translateX(-2px);
-  }
-}
-
-p {
-  text-align: center;
-  letter-spacing: 15px;
-  background: #34495e;
-  color: #fff;
-}
-
-p.morning {
-  background: #e67e22;
-}
+  </style>

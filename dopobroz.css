@@ -1,0 +1,96 @@
+.container {
+  margin-top: 4%;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  max-width: 100vw;
+  margin: 2rem 0 0;
+  width: 100vw;
+}
+
+:focus {
+  outline: none;
+}
+
+.button--bop {
+  font-family: "Fredoka One", cursive;
+  border: 4px solid #302f3a;
+  color: #302f3a;
+  position: relative;
+  height: 100px;
+  width: 300px;
+  margin: 2rem 3rem;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button--bop::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: -0.6rem;
+  top: -0.5rem;
+  z-index: -1;
+  background-color: #f7567c;
+  transition: all 200ms ease-out;
+}
+
+.button--bop:hover::before {
+  top: 0;
+  left: 0;
+}
+
+.button--bop:active {
+  transform: translateY(3px);
+}
+
+.button--flick:active {
+  animation: flick 640ms infinite;
+}
+
+.button--twist:active {
+  animation: twist 800ms infinite;
+}
+
+.button--spin:active {
+  animation: spin 800ms infinite;
+}
+
+@keyframes flick {
+  0% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+  67% {
+    transform: translate(0.4rem, -1.8rem) rotate(160deg) scale(0.4);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes twist {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(60deg);
+  }
+  60% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
